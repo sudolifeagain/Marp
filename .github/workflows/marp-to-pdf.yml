@@ -18,12 +18,16 @@ jobs:
       - name: Create slides directory
         run: mkdir -p slides
 
-      - name: Convert Marp Markdown to PDF
-        uses: docker://marpteam/marp-cli:v3.4.0
-        with:
-          args: --pdf --input-dir ./ --output ./slides --allow-local-files
-        env:
-          MARP_USER: root:root
+      - name: Find Marp files and convert to PDF
+        run: |
+          # marp: true を含むファイルのみを検索
+          for file in $(find . -name "*.md" -type f ! -path "./.git/*"); do
+            if head -n 20 "$file" | grep -q "^marp: true$"; then
+              echo "Converting $file to PDF..."
+              docker run --rm -v $PWD:/home/marp/app/ marpteam/marp-cli:v3.4.0 \
+                --pdf --allow-local-files "$file" -o "./slides/$(basename ${file%.md}.pdf)"
+            fi
+          done
 
       - name: Check for changes
         id: git-check
