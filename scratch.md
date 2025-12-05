@@ -25,12 +25,8 @@ paginate: true
 - https://scratch.mit.edu/projects/172353414 にアクセスする
 - リミックスするボタンを押す
 
-![リミックスボタンの場所](src/remix.png)
+![bg right:60% width:700px](src/remix.png)
 
-### ポイント2
-
-- 詳細3
-- 詳細4
 
 ---
 
