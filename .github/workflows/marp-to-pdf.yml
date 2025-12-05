@@ -24,7 +24,9 @@ jobs:
           for file in $(find . -name "*.md" -type f ! -path "./.git/*"); do
             if head -n 20 "$file" | grep -q "^marp: true$"; then
               echo "Converting $file to PDF..."
-              docker run --rm -v $PWD:/home/marp/app/ marpteam/marp-cli:v3.4.0 \
+              docker run --rm --init -v $PWD:/home/marp/app -e LANG=$LANG \
+                -e MARP_USER=$(id -u):$(id -g) \
+                marpteam/marp-cli:v3.4.0 \
                 --pdf --allow-local-files "$file" -o "./slides/$(basename ${file%.md}.pdf)"
             fi
           done
