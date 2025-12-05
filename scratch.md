@@ -22,10 +22,10 @@ paginate: true
 
 ### リミックスする
 
-- https://scratch.mit.edu/projects/172353414にアクセスする
+- https://scratch.mit.edu/projects/172353414 にアクセスする
 - リミックスするボタンを押す
 
-![リミックスボタンの場所](remix.png)
+![リミックスボタンの場所](src/remix.png)
 
 ### ポイント2
 
