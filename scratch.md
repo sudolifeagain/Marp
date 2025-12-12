@@ -6,7 +6,7 @@ paginate: true
 
 # Scratchでゲームをつくってみよう！
 
-## 長濵裕輔
+
 
 ---
 
