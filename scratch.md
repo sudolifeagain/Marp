@@ -6,8 +6,6 @@ paginate: true
 
 # Scratchでゲームをつくってみよう！
 
-
-
 ---
 
 # 今日やること
