@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '**/*.md'
+      - '!slides/**'
 
 jobs:
   build-slides:
