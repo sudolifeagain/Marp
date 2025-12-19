@@ -118,7 +118,7 @@ paginate: true
 - 今は矢が山なりに飛んでいるね
 - まっすぐ飛べばもっと楽になるかも！
 
-![bg right:60% width:700px](src/line.png)
+![bg right:60% width:700px](src/ya-tilt.png)
 
 ---
 
